@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507151530) do
+ActiveRecord::Schema.define(:version => 20130507171608) do
+
+  create_table "bookings", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "club_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -33,9 +40,37 @@ ActiveRecord::Schema.define(:version => 20130507151530) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "commentings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "revew_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "memberships", :force => true do |t|
     t.integer  "user_id"
     t.integer  "club_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "revewings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.integer  "club_id"
+    t.integer  "chapter_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "revews", :force => true do |t|
+    t.string   "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

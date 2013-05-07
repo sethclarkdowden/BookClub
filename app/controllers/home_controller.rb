@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   	  @head = "users"
   	  @user = User.find(:all)
   	  @club = Club.find(:all)
+  	  @book = Book.find(:all)
   end
 end

@@ -18,13 +18,27 @@
 	<ul>
 		<% @club.each do |c|%>
 		<li><%= c.name %></li>
-			<p>members<p>
+			<p>members</p>
 			<ul>
 				<% c.users.each do |u| %>
 				<li><%= u.name %></li>
 				<% end %>
 			</ul>
+			<p>books</p>
+			<ul>
+				<% c.books.each do |b| %>
+				<li><%= b.name %></li>
+				<% end %>
+			</ul>
 		</br>
+		<% end %>
+	</ul>
+</div>
+<div>
+	<h2>Books</h2>
+	<ul>
+		<% @book.each do |b| %>
+		<li><%= b.name %></li>
 		<% end %>
 	</ul>
 </div>
