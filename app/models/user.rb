@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :clubs, 		:through => :memberships
   has_many :revewings
-  has_many :revews, 	:through => :revewings, :source => :user 
+  has_many :revews, 	:through => :revewings
   has_many :commentings
   has_many :comments, 	:through => :commentings
 end
