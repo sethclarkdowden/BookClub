@@ -1,0 +1,30 @@
+<div>
+	<h2>Users</h2>
+	<ul>
+		<% @user.each do |u| %>
+		<li><%= u.name %></li>
+			<p>clubs</p>
+			<ul>
+				<% u.clubs.each do |c| %>
+				<li><%= c.name %></li>
+				<% end %>
+			</ul>
+		</br>
+		<% end %>
+	<ul>
+</div>
+<div>
+	<h2>Clubs</h2>
+	<ul>
+		<% @club.each do |c|%>
+		<li><%= c.name %></li>
+			<p>members<p>
+			<ul>
+				<% c.users.each do |u| %>
+				<li><%= u.name %></li>
+				<% end %>
+			</ul>
+		</br>
+		<% end %>
+	</ul>
+</div>
