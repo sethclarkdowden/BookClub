@@ -3,6 +3,5 @@ class Book < ActiveRecord::Base
   has_many :chapters
   has_many :bookings
   has_many :clubs, :through => :bookings
-  has_many :revewings
-  has_many :revews, :through => :revewings
+  has_many :reviews
 end
