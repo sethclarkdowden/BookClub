@@ -4,4 +4,5 @@ class Review < ActiveRecord::Base
   belongs_to :chapter
   belongs_to :club
   belongs_to :book
+  has_many :comments
 end

@@ -1,6 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :comment
-  has_many :commentings
-  has_many :users, 	:through => :commentings
-  has_many :revews, :throuth => :commentings
+  attr_accessible :comment, :review_id, :user_id
+  belongs_to :user
+  belongs_to :review 
 end
