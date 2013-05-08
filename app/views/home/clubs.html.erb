@@ -1,0 +1,8 @@
+<div>
+	<h2>Clubs</h2>
+	<ul>
+		<% @club.each do |c| %>
+		<li><a href="/c/<%= c.name %>"><%= c.name %></a></li>
+		<% end %>
+	</ul>
+</div>

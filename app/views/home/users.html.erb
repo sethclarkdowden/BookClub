@@ -1,0 +1,8 @@
+<div>
+	<h2>Books</h2>
+	<ul>
+		<% @user.each do |u| %>
+		<li><a href="/@/<%= u.name %>"><%= u.name %></a></li>
+		<% end %>
+	</ul>
+</div>

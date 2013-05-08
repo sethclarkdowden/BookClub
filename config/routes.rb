@@ -2,6 +2,17 @@ BookClub::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   root :to => "home#index"
+  match "/b/:name"  => "home#book"
+  match "/@/:name"  => "home#user"
+  match "/c/:name"  => "home#club"
+  match "/b/"       => "home#books"
+  match "/@/"       => "home#users"
+  match "/c/"       => "home#clubs"
+
+  # /b/:title => book page
+  # /@/:user => user page
+  # /c/:name => club page
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
