@@ -1,4 +1,11 @@
 <div>
-	<h2>User:</h2>
-	<h3><%= @user.name %></h3>
+	<h3>User: <%= @user.name %></h3>
+</div>
+<div>
+	<h4>Belongs to:</h4>
+	<ul>
+		<% @user.clubs.each do |c| %>
+		<li><a href="/c/<%= c.name %>"><%= c.name %></a></li> 
+		<% end %>
+	</ul>
 </div>

@@ -2,3 +2,35 @@
 	<h2>Book:</h2>
 	<h3><%= @book.name %></h3>
 </div>
+<div>
+	<h3>Chapters</h3>
+	<ul>
+		<% @book.chapters.each do |c| %>
+		<li><%= c.title %></li>
+			<ul>
+				<% c.reviews.each do |r| %>
+
+				<li>
+					<div>
+						<p> By: <%= r.user.name %> </p>
+						<p> <%= r.content %></p>
+					</div>
+				</li>
+				<% end %>
+			</ul>
+		<% end %>
+	</ul>
+</div>
+<div>
+	<h3>revews:</h3>
+	<ul>
+		<% @book.reviews.each do |r| %>
+		<li>
+			<div>
+				<p> By: <%= r.user.name %> </p>
+				<p> <%= r.content %></p>
+			</div>
+		</li>
+		<% end %>
+	</ul>
+</div>

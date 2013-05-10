@@ -1,4 +1,9 @@
 <div>
-	<h2>Club:</h2>
-	<h3><%= @club.name %></h3>
+	<h3>Club: <%= @club.name %></h3>
+</div>
+<div>
+	<h3>Members:</h3>
+	<% @club.users.each do |u| %>
+	<li><a href="/@/<%= u.name %>"><%= u.name %></a></li>
+	<% end %>
 </div>
