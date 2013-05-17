@@ -2,11 +2,57 @@
 <html>
 <head>
   <title>BookClub</title>
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://plus.google.com/js/client:plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="#">Book/Club</a>
+
+	  <div class="nav-collapse collapse">
+
+		<ul class="nav">
+		  <li class="active">
+		    <a href="/">Home</a>
+		  </li>
+		  <li><a href="/@">Users</a></li>
+		  <li><a href="/b">Books</a></li>
+		  <li><a href="/c">Clubs</a></li>
+		</ul>
+    <!-- bla bla lbalblab -->
+
+      <!-- need to connect to search  -->
+      <!-- !#!#!#!#!#!#!#!#!#!#!#!#! -->
+	  	<form id="search_form" class="navbar-search pull-right" action="" method="get">
+		    <input type="text" class="search-query" placeholder="Search Title/Author/ISBN">
+      </form>
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+      </div>
+ 
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 

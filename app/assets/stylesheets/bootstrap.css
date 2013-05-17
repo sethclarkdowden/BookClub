@@ -764,7 +764,7 @@ h3 {
 }
 
 h1 {
-  font-size: 38.5px;
+  font-size: 43.5px;
 }
 
 h2 {
@@ -3938,7 +3938,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   margin-left: 0;
   list-style: none;
 }
@@ -4356,7 +4356,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   *position: relative;
   *z-index: 2;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   overflow: visible;
 }
 
@@ -5550,6 +5550,8 @@ input[type="submit"].btn.btn-mini {
   padding: 4px;
   line-height: 20px;
   border: 1px solid #ddd;
+  /*seth add shit here */
+  height: 220px;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -6155,4 +6157,8 @@ a.badge:focus {
 
 .affix {
   position: fixed;
+}
+
+body{
+  padding-top:40px;
 }

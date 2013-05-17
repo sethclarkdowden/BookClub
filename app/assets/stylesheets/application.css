@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+
+
+ .masthead{
+	background-image:url('http://i.imgur.com/qK3l8wb.jpg');	
+	height: 700px;
+}
+
+.white{
+	color:#fff;
+}
+
+.jumbotron{
+	margin-top: 200px;
+	margin-bottom:400px;
+}
+
+.big{
+	font-size: 130%;
+}

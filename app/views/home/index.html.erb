@@ -1,44 +1,60 @@
-<div>
-	<h2>Users</h2>
-	<ul>
-		<% @user.each do |u| %>
-		<li><%= u.name %></li>
-			<p>clubs</p>
-			<ul>
-				<% u.clubs.each do |c| %>
-				<li><%= c.name %></li>
-				<% end %>
+<div class="row-fluid masthead">
+	<div class="span6 offset3 jumbotron">
+		<h1 class="white">Book/Club</h1>
+		<p class="white big">Books Clubs and Books</p>
+		<!-- Button to trigger modal -->
+		<a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Join Now</a>
+		 
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="myModalLabel">Join Now !</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>Using Google + loging foo</p>
+		  </div>
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		    <button class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	</div>
+
+	<div class="span10 offset1">
+	<h1>Popular Books</h1>
+		<div class="span11 hero-unit">
+			<ul class="thumbnails">
+			<% @popular.each do |b| %>
+			<li class="row-fluid span3">
+				<a href="#" class="thumbnail" id="<%= b.isbn %>">
+				<img 	src="<%= b.image_link(:zoom => 2) %>" class="img-rounded" alt="">
+				</a>
+			</li>
+			<% end %>
 			</ul>
-		</br>
-		<% end %>
-	<ul>
-</div>
-<div>
-	<h2>Clubs</h2>
-	<ul>
-		<% @club.each do |c|%>
-		<li><%= c.name %></li>
-			<p>members</p>
-			<ul>
-				<% c.users.each do |u| %>
-				<li><%= u.name %></li>
-				<% end %>
+		</div>
+	</div>
+
+	<div class="span10 offset1">
+	<h1>Clubs</h1>
+		<div class="span11 hero-unit">
+		</div>
+	</div>
+
+	<div class="span10 offset1">
+	<h1>Books Being Clubed</h1>
+		<div class="span11 hero-unit">
+			<ul class="thumbnails">
+			<% @clubbing.each do |b| %>
+			<li class="row-fluid span3">
+				<a href="#" class="thumbnail" id="<%= b.isbn %>">
+				<img 	src="<%= b.image_link(:zoom => 2) %>" class="img-rounded" alt="">
+				</a>
+			</li>
+			<% end %>
 			</ul>
-			<p>books</p>
-			<ul>
-				<% c.books.each do |b| %>
-				<li><%= b.name %></li>
-				<% end %>
-			</ul>
-		</br>
-		<% end %>
-	</ul>
-</div>
-<div>
-	<h2>Books</h2>
-	<ul>
-		<% @book.each do |b| %>
-		<li><%= b.name %></li>
-		<% end %>
-	</ul>
+		</div>
+	</div>
+
 </div>

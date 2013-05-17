@@ -1,0 +1,8 @@
+LOG:  database system was shut down at 2013-05-13 14:21:06 PDT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "sethclarkdowden" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
