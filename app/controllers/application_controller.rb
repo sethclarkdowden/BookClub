@@ -1,10 +1,10 @@
+require 'google/api_client/client_secrets'
 class ApplicationController < ActionController::Base
   before_filter :setup_oauth2
   protect_from_forgery
+	PLUS_LOGIN_SCOPE = 'https://www.googleapis.com/auth/plus.login'
+	def setup_oauth2
 
-def :setup_oauth2
-		APPLICATION_NAME = 'Google+ Ruby Quickstart'
-		PLUS_LOGIN_SCOPE = 'https://www.googleapis.com/auth/plus.login'
 
 		# Build the global client
 		$credentials = Google::APIClient::ClientSecrets.load
@@ -16,7 +16,8 @@ def :setup_oauth2
 		    :redirect_uri => $credentials.redirect_uris.first,
 		    :scope => PLUS_LOGIN_SCOPE)
 		$client = Google::APIClient.new
-  def 
+	end
+
 end
 
 class TokenPair

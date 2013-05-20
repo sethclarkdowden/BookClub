@@ -3,6 +3,8 @@ BookClub::Application.routes.draw do
   # first created -> highest priority.
   root :to => "home#index"
 
+  match "/connect" => "auth#connect"
+  match "/disconnect" => "auth#disconnect"
 
   match "/admin/add" => "home#add"
   match "/b/:name"  => "home#book"

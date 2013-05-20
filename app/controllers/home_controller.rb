@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+
+
   def index
     @popular = GoogleBooks.search('go the fuck to sleep', {:count => 4, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]})
     @clubbing = GoogleBooks.search('seal', {:count => 4, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]})
@@ -9,10 +11,9 @@ class HomeController < ApplicationController
     end
     state = session[:state]
 
-    response = File.read('index.html').sub(/[{]{2}\s*STATE\s*[}]{2}/, state)
-    response = response.sub(/[{]{2}\s*CLIENT_ID\s*[}]{2}/, $credentials.client_id)
-    response = response.sub(/[{]{2}\s*APPLICATION_NAME\s*[}]{2}/, APPLICATION_NAME)
+    @client_id = $credentials.client_id
   end
+
   def books
   	@book = Book.find(:all)
   end

@@ -53,4 +53,5 @@ class AuthController < ApplicationController
 	  request.use_ssl = true
 	  status request.get(uri.request_uri).code
 	end
+	
 end
