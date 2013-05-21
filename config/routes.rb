@@ -13,8 +13,18 @@ BookClub::Application.routes.draw do
   match "/b/"       => "home#books"
   match "/@/"       => "home#users"
   match "/c/"       => "home#clubs"
-  match "/:search"  => "home#search"
 
+
+  resources :clubs
+
+  get '/all', :to => 'clubs#index', :as => 'all'
+
+  resources :users
+
+  get '/all', :to => 'users#index', :as => 'all'
+
+# perma bottom link foo
+  match "/:search"  => "home#search"
   # /b/:title => book page
   # /@/:user => user page
   # /c/:name => club page
