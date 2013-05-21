@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 
 gem 'figaro'
-gem 'google-api-client', '>= 0.6.2', :require => 'google/api_client'
-gem 'signet', '>=0.4.5'
+
 
 group :test, :development do
 	gem 'rspec-rails'
