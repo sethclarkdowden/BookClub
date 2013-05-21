@@ -1,0 +1,35 @@
+<div class="span12 offset3">
+	<h1><%= @club.name %></h1>
+	<div class="row-fluid">
+		<div class="span8">
+			<div class="hero-unit">
+			  <h3>Currently Reading</h3>
+			  <!-- add a curently reading stuff foo -->
+			</div>
+			<div class="hero-unit">
+			  <h3>club Book Shelf</h3>
+			  <!-- add a curently reading stuff foo -->
+			</div>
+		</div>
+<!-- side bar -->
+		<div class="span4">
+			<div class="hero-unit">
+				<!-- user id needs to be added after auth is fixed -->
+				<%= link_to 'Join', new_membership_path, :method => :get, :class => "btn" %>
+				<table class="table table-striped table-bordered">
+		      <thead>
+		        <tr>
+		          <th>Members:</th>
+		        </tr>
+		      </thead>
+		      <% @club.users.each do |member| %>
+		        <tr>
+		          <td><%= link_to member.name, member %></td>
+		        </tr>
+		      <% end -%>
+		    </table>
+			</div>
+		</div>
+	</div>
+
+</div>
