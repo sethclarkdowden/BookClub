@@ -39,12 +39,12 @@ class ClubsController < ApplicationController
 
 	def show
     @club = Club.find params[:id]
-    @membership = Membership.new
+    @new_membership = Membership.new
 		@is_member = @club.users.any? {|u| u.id == current_user.id}
-		@member = Membership.all
-		@member.each do |m|
+		@membership = Membership.all
+		@membership.each do |m|
 			if m.club_id == @club.id && m.user_id == current_user.id
-				@member = m
+				@membership = m
 			end
 		end
 
