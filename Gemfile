@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 
 gem 'figaro'
+gem 'omniauth-google-oauth2'
 
 
 group :test, :development do

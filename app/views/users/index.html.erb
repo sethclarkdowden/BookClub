@@ -6,7 +6,7 @@
         <tr>
           <th>#</th>
           <th>Title</th>
-          <th>Options</th>
+          <th>Acess token</th>
         </tr>
       </thead>
 
@@ -14,14 +14,9 @@
         <tr>
           <td><%= user.id %></td>
           <td><%= link_to user.name, user %></td>
-          <td>
-            <%= link_to 'Edit', edit_user_path(user.id), :method => :get, :class => "btn" %>
-            <%= link_to 'Delete', user, :method => 'delete', :class => "btn btn-danger" %>
-          </td>
+          <td><%= user.access_token %></td>
         </tr>
       <% end -%>
     </table>
-
-    <p><%= link_to 'New User', new_user_path, :method => :get, :class => "btn" %></p>
   </div>
 </div>

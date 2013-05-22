@@ -1,10 +1,11 @@
 BookClub::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  get "home/index"
   root :to => "home#index"
 
-  match "/connect" => "auth#connect"
-  match "/disconnect" => "auth#disconnect"
+  match "/auth/google_oauth2/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
 
   match "/admin/add" => "home#add"
   match "/b/:name"  => "home#book"

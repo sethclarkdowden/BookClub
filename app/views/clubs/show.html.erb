@@ -14,8 +14,17 @@
 <!-- side bar -->
 		<div class="span4">
 			<div class="hero-unit">
-				<!-- user id needs to be added after auth is fixed -->
-				<%= link_to 'Join', new_membership_path, :method => :get, :class => "btn" %>
+				<% if current_user %>
+					<% if @is_member %>
+						<%= link_to 'Unsubscribe', @member, :method => 'delete', :class => "btn btn-danger" %>
+					<% else %>
+						<%= form_for @membership do |f| %>
+							<%= f.hidden_field :user_id, :value => current_user.id %>
+							<%= f.hidden_field	:club_id, :value => @club.id %>
+							<%= f.submit %>
+						<% end %>
+					<% end %>
+				<% end %>
 				<table class="table table-striped table-bordered">
 		      <thead>
 		        <tr>

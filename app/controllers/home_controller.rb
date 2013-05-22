@@ -10,8 +10,6 @@ class HomeController < ApplicationController
       session[:state] = state
     end
     state = session[:state]
-
-    @client_id = $credentials.client_id
   end
 
   def books

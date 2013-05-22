@@ -10,7 +10,12 @@ class MembershipsController < ApplicationController
 	def create
 		@membership = Membership.new params[:membership]
 		if @membership.save
-			redirect_to users_path
+			redirect_to clubs_path
 		end
 	end
+
+	def destroy
+		@membership = Membership.find params[:id]
+    @membership.destroy
+	end 
 end
