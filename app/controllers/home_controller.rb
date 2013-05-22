@@ -12,34 +12,6 @@ class HomeController < ApplicationController
     state = session[:state]
   end
 
-  def books
-  	@book = Book.find(:all)
-  end
-
-  def book
-  	@book = Book.find_by_name(params[:name])
-  end
-
-  def users
-  	@user = User.find(:all)
-  end
-
-  def user
-    @user = User.find_by_name(params[:name])
-  end
-
-  def clubs
-  	@club = Club.find(:all)
-  end
-
-  def club
-    @club = Club.find_by_name(params[:name])
-  end
-
-  def add
-
-  end
-
   def search
     # need to add ISBN id + author id maby +
     search = params[:search]
