@@ -16,6 +16,11 @@ class HomeController < ApplicationController
     # need to add ISBN id + author id maby +
     search = params[:search]
     @books = GoogleBooks.search(search, {:count => 40, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]}) 
-
   end
-end
+
+  def book
+    book_isbn = "isbn#{params[:isbn]}"
+    @book = GoogleBooks.search(book_isbn, {:count=> 1, :page => 1, :apie_key => ENV["GOOGLE_API_KEY"]})
+    @book = @book.first
+  end
+end 

@@ -2,7 +2,7 @@
 <ul class="thumbnails">
 <% @books.each do |b| %>
 <li class="span3">
-	<a href="#" class="thumbnail" id="<%= b.isbn %>">
+	<a href="/book/<%=b.isbn %>" class="thumbnail" id="<%= b.isbn %>">
 	<img 	src="<%= b.image_link(:zoom => 1) %>" class="img-rounded" alt="">
 	</a>
 	<!-- <h5><%= b.title %></h5> -->

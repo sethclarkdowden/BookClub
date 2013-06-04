@@ -6,15 +6,7 @@ BookClub::Application.routes.draw do
 
   match "/auth/google_oauth2/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
-
-  match "/admin/add" => "home#add"
-  match "/b/:name"  => "home#book"
-  match "/@/:name"  => "home#user"
-  match "/c/:name"  => "home#club"
-  match "/b/"       => "home#books"
-  match "/@/"       => "home#users"
-  match "/c/"       => "home#clubs"
-
+  match "/book/:isbn" => "home#book"
 
   resources :clubs
 
