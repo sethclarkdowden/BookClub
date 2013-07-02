@@ -1,9 +1,9 @@
-BookClub app
-========= 
+== BookClub app
+
 Book Club Application that Creates a community around books. 
 
-### Using
----------
+== Using
+
 Rails
 Twitter-Bootstrap
 Backbone
@@ -13,9 +13,9 @@ Google Book API
 Google Oauth2 login 
 
 
-### Learning Goals:
--------------------
-- [ ] Connect to a 3rd Party API
-- [ ] Use a 3rd Party Authentication
-- [x] Create a Responsive User Interface with Backbone.js
+== Learning Goals:
+
+√ Connect to a 3rd Party API
+√ Use a 3rd Party Authentication
+  Create a Responsive User Interface with Backbone.js
 
