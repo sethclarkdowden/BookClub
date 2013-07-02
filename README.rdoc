@@ -17,5 +17,7 @@ Book Club Application that Creates a community around books.
 
 * √ Connect to a 3rd Party API
 * √ Use a 3rd Party Authentication
-*   Create a Responsive User Interface with Backbone.js
+* X Create a Responsive User Interface with Backbone.js
 
+  X in progress
+  √ complete 
