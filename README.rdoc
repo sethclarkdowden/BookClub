@@ -17,5 +17,5 @@ Google Oauth2 login
 
 √ Connect to a 3rd Party API
 √ Use a 3rd Party Authentication
-  Create a Responsive User Interface with Backbone.js
+Create a Responsive User Interface with Backbone.js
 
