@@ -20,6 +20,10 @@ BookClub::Application.routes.draw do
 
   get '/all', :to => 'memberships#index', :as => 'all'
 
+  resources :ratings
+
+  get '/all', :to => 'ratings#index', :as => 'all'
+
 # perma bottom link foo
   match "/:search"  => "home#search"
   # /b/:title => book page

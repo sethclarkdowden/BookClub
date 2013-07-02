@@ -28,17 +28,18 @@
         <span class="icon-bar"></span>
       </a>
 
-      <a class="brand" href="#">Book/Club</a>
+      <a class="brand" href="/">Book/Club</a>
 
 	  <div class="nav-collapse collapse">
 
 		<ul class="nav">
-		  <li class="active">
-		    <a href="/">Home</a>
-		  </li>
-		  <li><a href="/@">Users</a></li>
-		  <li><a href="/b">Books</a></li>
-		  <li><a href="/c">Clubs</a></li>
+		  <li><a href="/users">Users</a></li>
+		  <li><a href="/clubs">Clubs</a></li>
+      <% if current_user %>
+        <li> <%= link_to current_user.name+" Sign Out", "/signout" %> </li>
+      <% else %>
+        <li><%= link_to "G+ Signin", "/auth/google_oauth2" %> </li>
+      <% end %>
 		</ul>
     <!-- bla bla lbalblab -->
 

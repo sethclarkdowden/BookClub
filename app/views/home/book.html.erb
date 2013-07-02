@@ -1,11 +1,13 @@
 <div class="hero-unit">
 	<div class="span5">
 		<img 	src="<%= @book.image_link(:zoom => 1) %>" class="img-rounded" alt=""></br>
-			<a href="#"><i class="icon-star"></i>*</a>
-			<a href="#"><i class="icon-star"></i>*</a>
-			<a href="#"><i class="icon-star"></i>*</a>
-			<a href="#"><i class="icon-star"></i>*</a>
-			<a href="#"><i class="icon-star"></i>*</a>
+			<% if current_user %>
+				<a href="#"><i class="icon-star"></i>*</a>
+				<a href="#"><i class="icon-star"></i>*</a>
+				<a href="#"><i class="icon-star"></i>*</a>
+				<a href="#"><i class="icon-star"></i>*</a>
+				<a href="#"><i class="icon-star"></i>*</a>
+			<% end %>
 	</div>
 	<div class ="span7">
 		<h1> <%= @book.title %> </h1>

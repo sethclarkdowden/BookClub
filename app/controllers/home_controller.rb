@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
 
   def index
-    @popular = GoogleBooks.search('go the fuck to sleep', {:count => 4, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]})
+    @popular = GoogleBooks.search('great gastby', {:count => 4, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]})
     @clubbing = GoogleBooks.search('seal', {:count => 4, :page =>  1,:api_key => ENV["GOOGLE_API_KEY"]})
     
     if !session[:state]
